@@ -40,71 +40,107 @@
   display: block;
 }
 
+.djs-palette {
+  left: 20px;
+  top: 65px !important;
+}
+
 /* OLC selection dropdown */
 .olc-buttonbar {
     position: absolute;
-    top: 30px;
-    right: 100px;
-    background-color: #29487D;
-    border-radius: 15px;
+    top: 10px;
+    left: 20px;
+    background-color: hsl(225, 10%, 97%);
+    border: solid 1px hsl(225, 10%, 75%);
+    border-radius: 2px;
     box-sizing: border-box;
-    min-width: 160px;
+    width: 260px;
     padding-left: 10px;
     padding-right: 10px;
     display: flex;
-    justify-content: space-between;
-}
-
-.olc-buttonbar > *:first-child {
-    border-radius: 5px 0px 0px 5px;
-}
-
-.olc-buttonbar > *:last-child {
-    border-radius: 0px 15px 15px 0px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
 }
 
 .olc-buttonbar > * {
-    background-color: #29487D;
-    border-color: #29487D;
-    color: white;
+    background-color: hsl(225, 10%, 97%);
+    color: black;
     font-size: 16px;
 }
 
 .olc-buttonbar *:focus {
-    border-color:  #29487D !important;
+    border-color:  hsl(225, 10%, 97%) !important;
 }
 
 .olc-buttonbar > button {
     border-style: none;
+    height: 24px;
+    width: 24px;
+    padding: 0;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.olc-buttonbar > button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.olc-buttonbar > button:first-of-type {
+    margin-right: auto;
 }
 
 .olc-select-component {
-    display: inline;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 12px;
+    padding-right: 4px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    background-color: white;
+    border: solid 1px hsl(225, 10%, 75%);
+    width: 180px;
+}
+
+.olc-select-component > span,
+.olc-select-component > input {
+    flex-grow: 1;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
 }
 
 .olc-select-component::after {
     content: '▼';
-    padding-left: 3px;
+    padding-left: 8px;
+    flex-shrink: 0;
 }
 
 .olc-select-component > input {
     border: none;
+    background-color: white;
 }
 
 .dd-dropdown-menu {
-    background-color: #29487D;
-    border-radius: 15px;
+    background-color: hsl(225, 10%, 97%);
+    border-radius: 10px;
     display: none;
     position: absolute;
     top: 100%;
     left: 0px;
-    min-width: 160px;
+    min-width: 260px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 .dd-dropdown-entry, .dd-dropdown-create-input {
-    color: white;
+    color: black;
     font-size: 14px;
     padding: 12px 16px;
     text-decoration: none;
@@ -116,8 +152,8 @@
 }
 
 .dd-dropdown-entry:not(.unclickable):hover  {
-    color: #29487D;
-    background-color: white;
+    color: black;
+    background-color: hsl(0, 0%, 80%);
 }
 
 .dd-dropdown-multicontainer {
@@ -131,18 +167,18 @@
 }
 
 .dd-dropdown-menu:first-of-type > .dd-dropdown-entry:first-child  {
-    border-top-left-radius: 15px;
+    border-top-left-radius: 10px;
 }
 
 .dd-dropdown-menu:first-of-type > .dd-dropdown-entry:last-child  {
-    border-bottom-left-radius: 15px;
+    border-bottom-left-radius: 10px;
 }
 
 .dd-dropdown-menu:last-of-type > .dd-dropdown-entry:first-child  {
-    border-top-right-radius: 15px;
+    border-top-right-radius: 10px;
 }
 
 .dd-dropdown-menu:last-of-type > .dd-dropdown-entry:last-child  {
-    border-bottom-right-radius: 15px;
+    border-bottom-right-radius: 10px;
 }
 
